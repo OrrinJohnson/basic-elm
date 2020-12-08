@@ -1,4 +1,5 @@
 module Weekdays exposing (main)
+
 import Html
 
 weekday correspondingNumber =
