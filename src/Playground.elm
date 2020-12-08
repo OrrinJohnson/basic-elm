@@ -3,10 +3,8 @@ import Html
 
 escapeEarth myVelocity mySpeed fuelStatus =
     let
-        escapeVelocityInKmPerSec =
-            11.186
-        orbitalSpeedInKmPerSec =
-            7.67
+        escapeVelocityInKmPerSec = 11.186
+        orbitalSpeedInKmPerSec = 7.67
         whereToLand =
             if fuelStatus == "low" then
                 "Land on drone ship."
