@@ -41,5 +41,10 @@ dwightSplit =
     -- be wary of the split value, if it's an empty string, it will split
     -- each character of each string.
 
+
+palindrome word =
+    word == String.reverse word
+    -- well, that's pretty easy, huh?
+
 main =
     Html.text revelation
