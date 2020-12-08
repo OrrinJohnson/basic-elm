@@ -34,5 +34,12 @@ anotherDwightString =
     -- for example, you could join with ',' or even ':'.
 
 
+-- But what about splitting a string?
+dwightSplit =
+    String.split " " "Bears. Beats. Battlestar Gallactica"
+    -- ["Bears.", "Beats.", "Battlestar", "Gallactica"]
+    -- be wary of the split value, if it's an empty string, it will split
+    -- each character of each string.
+
 main =
-    Html.text anotherDwightString
+    Html.text revelation
