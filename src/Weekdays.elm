@@ -20,5 +20,24 @@ weekday correspondingNumber =
         _ ->
             "Unknown day"
 
+hashtag correspondingNumber =
+    case weekday correspondingNumber of
+        "Sunday" ->
+            "#SinDay"
+        "Monday" ->
+            "#MondayBlues"
+        "Tuesday" ->
+            "#TakeMeBackTuesday"
+        "Wednesday" ->
+            "#HumpDay"
+        "Thursday" ->
+            "#ThrowbackThursday"
+        "Friday" ->
+            "#FlashbackFriday"
+        "Saturday" ->
+            "#Caturday"
+        _ ->
+            "Whatever"
+
 main =
-    Html.text <| weekday 3
+    Html.text <| hashtag 5
