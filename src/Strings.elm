@@ -14,6 +14,9 @@ revelation =
     - George Costanza
     """
 
+concatString =
+    "These pretzels are " ++ "making me thirsty"
+
 
 main =
-    Html.text revelation
+    Html.text concatString
