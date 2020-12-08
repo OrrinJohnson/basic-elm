@@ -46,5 +46,17 @@ palindrome word =
     word == String.reverse word
     -- well, that's pretty easy, huh?
 
+
+-- Filtering strings
+isValid char = char /= '-'
+
+
+-- String.filter isValid "222-111-5555"
+--- returns "2221115555"
+
+--formating a string...
+upperCase = String.toUpper "I don't want to do this anymore!!!"
+
+
 main =
     Html.text revelation
