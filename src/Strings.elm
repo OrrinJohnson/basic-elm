@@ -23,5 +23,16 @@ concatChars =
     -- the parentheses aren't necessary and this works without them.
 
 
+dwightString = 
+    String.concat ["Bears. ", "Beets. ", "Battlestar Gallactica."]
+    -- this method requires the strings to be in a list and have spacing.
+
+
+anotherDwightString =
+    String.join " " ["Bears.", "Beets.", "Battlestar Gallactica."]
+    -- join takes two params, what are you joining with and the list.
+    -- for example, you could join with ',' or even ':'.
+
+
 main =
-    Html.text concatChars
+    Html.text anotherDwightString
