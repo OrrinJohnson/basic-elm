@@ -17,6 +17,11 @@ revelation =
 concatString =
     "These pretzels are " ++ "making me thirsty"
 
+-- as you can't concatenate chars, you must first turn them into strings.
+concatChars =
+    (String.fromChar 'O') ++ (String.fromChar 'J')
+    -- the parentheses aren't necessary and this works without them.
+
 
 main =
-    Html.text concatString
+    Html.text concatChars
