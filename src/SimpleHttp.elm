@@ -1,7 +1,7 @@
 module SimpleHttp exposing (main)
 
 import Browser
-import Html exposing (Html, text, pre)
+import Html exposing (Html, pre, text)
 import Http
 
 
@@ -11,11 +11,11 @@ import Http
 
 main =
     Browser.element
-    { init = init
-    , update = update
-    , subscriptions = subscriptions
-    , view = view
-    }
+        { init = init
+        , update = update
+        , subscriptions = subscriptions
+        , view = view
+        }
 
 
 
@@ -28,8 +28,8 @@ type Model
     | Success String
 
 
-init : () -> (Model, Cmd Msg)
-init _=
+init : () -> ( Model, Cmd Msg )
+init _ =
     ( Loading
     , Http.get
         { url = "https://elm-lang.org/assets/public-opinion.txt"
@@ -43,10 +43,10 @@ init _=
 
 
 type Msg
-    = GotText ( Result Http.Error String )
+    = GotText (Result Http.Error String)
 
 
-update : Msg -> Model -> (Model, Cmd Msg)
+update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         GotText result ->
@@ -74,11 +74,11 @@ subscriptions model =
 view : Model -> Html Msg
 view model =
     case model of
-       Failure ->
+        Failure ->
             text "I was unable to load your book.."
 
-       Loading ->
+        Loading ->
             text "Loading..."
 
-       Success fullText ->
+        Success fullText ->
             pre [] [ text fullText ]
